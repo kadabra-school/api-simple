@@ -1,10 +1,10 @@
 const uuidv4 = require("uuid/v4");
 
 module.exports = (app) => {
-  const customerWalletsDB = app.data.customerWallets;
-  const controller = {};
+  var customerWalletsDB = app.data.customerWallets;
+  var controller = {};
 
-  const { customerWallets: customerWalletsMock } = customerWalletsDB;
+  var { customerWallets: customerWalletsMock } = customerWalletsDB;
 
   controller.listCustomerWallets = (req, res) =>
     res.status(200).json(customerWalletsDB);
@@ -26,9 +26,9 @@ module.exports = (app) => {
   };
 
   controller.removeCustomerWallets = (req, res) => {
-    const { customerId } = req.params;
+    var { customerId } = req.params;
 
-    const foundCustomerIndex = customerWalletsMock.data.findIndex(
+    var foundCustomerIndex = customerWalletsMock.data.findIndex(
       (customer) => customer.id === customerId
     );
 
@@ -49,9 +49,9 @@ module.exports = (app) => {
   };
 
   controller.updateCustomerWallets = (req, res) => {
-    const { customerId } = req.params;
+    var { customerId } = req.params;
 
-    const foundCustomerIndex = customerWalletsMock.data.findIndex(
+    var foundCustomerIndex = customerWalletsMock.data.findIndex(
       (customer) => customer.id === customerId
     );
 
@@ -62,7 +62,7 @@ module.exports = (app) => {
         customerWallets: customerWalletsMock,
       });
     } else {
-      const newCustomer = {
+      var newCustomer = {
         id: customerId,
         parentId: req.body.parentId,
         name: req.body.name,
@@ -88,7 +88,7 @@ module.exports = (app) => {
   controller.getCustomerWallets = (req, res) => {
     const { customerId } = req.params;
 
-    let customer;
+    var customer;
 
     for (const customerData of customerWalletsMock.data) {
       if (customerData.id === customerId) {

@@ -17,3 +17,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Portuguese
+          PROMPT: Por favor, analise o código utilizando o design patterns Builder e me traga insumos de bugs e melhoras de performance
