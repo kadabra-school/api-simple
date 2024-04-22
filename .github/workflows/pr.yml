@@ -16,11 +16,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          LANGUAGE: Portuguese
-          PROMPT: Por favor, analise o código utilizando o design patterns Builder e me traga insumos de bugs e melhoras de performance
-          OPENAI_API_ENDPOINT: https://api.openai.com/v1
-          MODEL: gpt-3.5-turbo
+          LANGUAGE: Portuguese # Linguagem de resposta do CHAT GPT
+          PROMPT: Você é um desenvolvedor de software e recebeu o seguinte código de um colega para revisão. Seu objetivo é identificar possíveis bugs e sugestões de melhorias no código fornecido. Considere legibilidade, desempenho e segurança.
+          OPENAI_API_ENDPOINT: https://api.openai.com/v1 # API do chat GPT
+          MODEL: gpt-3.5-turbo # Modelo do GPT que será utilizado
           top_p: 1
-          temperature: 1
-          max_tokens: 10000
+          temperature: 1 # Controla o quão criativo ele pode ser em sua resposta
+          max_tokens: 10000 # Quantidade máxima de tokens utilizado na requisição
           MAX_PATCH_LENGTH: 10000
