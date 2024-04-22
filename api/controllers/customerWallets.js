@@ -109,7 +109,6 @@ module.exports = (app) => {
         customerWallets: customer,
       });
     }
-  };
 
   return controller;
 };

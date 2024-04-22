@@ -17,10 +17,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Portuguese # Linguagem de resposta do CHAT GPT
-          PROMPT: Você é um desenvolvedor de software e recebeu o seguinte código de um colega para revisão. Seu objetivo é identificar possíveis bugs e sugestões de melhorias no código fornecido. Considere legibilidade, desempenho e segurança.
+          PROMPT: Você é um desenvolvedor de software e recebeu o seguinte código de um colega para revisão. Seu objetivo é identificar possíveis bugs e sugestões de melhorias no código fornecido. Considere legibilidade, desempenho e segurança. # Prompt customizado para análise do código
           OPENAI_API_ENDPOINT: https://api.openai.com/v1 # API do chat GPT
           MODEL: gpt-3.5-turbo # Modelo do GPT que será utilizado
           top_p: 1
           temperature: 1 # Controla o quão criativo ele pode ser em sua resposta
           max_tokens: 4096 # Quantidade máxima de tokens utilizado na requisição
-          MAX_PATCH_LENGTH: 10000
+          MAX_PATCH_LENGTH: 8000 # Se a diferença do antigo para o código novo for maior que X valor ele será ignorado para análise
