@@ -22,5 +22,5 @@ jobs:
           MODEL: gpt-3.5-turbo # Modelo do GPT que será utilizado
           top_p: 1
           temperature: 1 # Controla o quão criativo ele pode ser em sua resposta
-          max_tokens: 10000 # Quantidade máxima de tokens utilizado na requisição
+          max_tokens: 4096 # Quantidade máxima de tokens utilizado na requisição
           MAX_PATCH_LENGTH: 10000
